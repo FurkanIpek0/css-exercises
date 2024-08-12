@@ -15,6 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: ;
 }
 
 button {
@@ -42,7 +43,7 @@ button {
 }
 
 .popup-modal p {
-  margin-bottom: 24px;
+  margin-bottom: 24px; 
 }
 
 .backdrop {
@@ -55,9 +56,20 @@ button {
 
 .popup-modal.show {
   opacity: 100%;
+  top: 50%;
   pointer-events: all;
 }
 
 .backdrop.show {
   opacity: 30%;
 }
+
+/* My Solution */
+
+.popup-modal {
+  top: 0;
+  transition: top 0.5s, opacity 0.5s;
+  transition-timing-function: ease;
+}
+
+
